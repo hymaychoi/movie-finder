@@ -1,0 +1,92 @@
+.detail, .loading {
+    height:100vh;
+    background: var(--cl-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    margin:0 auto;
+}
+
+.close-btn{
+    display: inline-block;
+    position: absolute;
+    left:1em;
+    top:1em;
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--cl-acc);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.detail-img {
+    width:40%;
+    max-width:350px;
+    vertical-align: middle;
+    
+}
+
+.detail-img img{
+    width:100%;
+    border: 2px var(--cl-acc) solid;
+    box-shadow: 5px 5px 15px 5px var(--cl-bg);
+}
+
+.detail-info {
+    width:60%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2em;
+}
+
+.detail-info > * {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stars-outer {
+    display: inline-block;
+    position: relative;
+    font-family: FontAwesome;
+}
+   
+.stars-outer::before {
+    content: "\f006 \f006 \f006 \f006 \f006";
+}
+   
+.stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+}
+   
+.stars-inner::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    color: #f8ce0b;
+}
+
+.movie-genres {
+    display: flex;
+    list-style: none;
+    margin-left: -2.3em;
+}
+
+.movie-genres * {
+    padding: .5em 1.2em;
+    margin-right:1em;
+    background: var(--cl-acc);
+    border-radius: 10px;
+    font-size:.8em;
+}
+
+.loading {
+    height:100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

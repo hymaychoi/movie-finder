@@ -1,0 +1,119 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+:root {
+    --cl-acc:#DA680B;
+    --cl-white:whitesmoke;
+    --cl--lgt:rgba(100, 100, 100. 0.5);
+    --cl-bg: rgba(0,0,0,0.9);
+}
+
+.Home {
+    min-height: 100vh;
+    color:var(--cl-white);
+    font-family: 'Inter', sans-serif;
+    background-color: var(--cl-bg);
+}
+
+.header {
+    min-height:35vh;
+    background-image: url("../imgs/THJJRUhNlEc.png");
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    background-color: var(--cl-bg);
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 2em;
+    margin-top: 0;
+    text-align: left;
+    text-shadow: var(--cl-white) 1px 1px 2px;
+}
+
+.title span {
+    display: block;
+    font-size: 1.5em;
+    color: var(--cl-acc);
+}
+
+/* movie items element */
+.items {
+    padding:.5em 1em 0.5em ;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:65vh;
+    background: var(--cl-bg);
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    user-select: none;
+    transition: all 0.2s;
+    will-change: transform;
+    perspective: 450px;
+    cursor: pointer;
+}
+
+.items.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+  }
+
+.item {
+    min-width: 200px;
+    max-width: 250px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item-detail-link {
+    color: var(--cl-white);
+    text-shadow: 1px 1px .5px #7A7A7A;
+    transition: all 0.2s;
+    transform: scale(0.97);
+}
+
+.item-detail-link:hover,
+.item-detail-link:active {
+    transform: scale(1.1);
+    color:var(--cl-acc);
+}
+
+.item img {
+    width:100%;
+}
+
+.item h2{
+    color:var(--cl-white);
+    font-size: 1.2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item_genres {
+    margin:0 0em 0.2em -3.2em;
+    list-style: none;
+    display: flex;
+    font-size: .7em;
+    color: #a2a2a2;
+}
+
+.item_genres > * {
+    padding:.12em;
+}
+
+.item:nth-child(even) { transform: rotateY(20deg); }
+.item:nth-child(odd) { transform: rotateY(-20deg); }
