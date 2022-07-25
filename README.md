@@ -1,5 +1,5 @@
 # Top rated movies
-User can retrieve movies by rating both descending and ascending order.
+User can retrieve movies by rating with range slider and find more details about the movie (rating, runtime, summary).
 
 ## Tech stacks
 html, css, javascript, React, ReactRouterDOM, GithubPages
